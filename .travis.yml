@@ -1,0 +1,8 @@
+language: node_js
+addons:
+  chrome: stable
+before_install:
+  - npm install -g @lhci/cli@0.3.x
+script:
+  - npm run build # build your site
+  - lhci autorun # run lighthouse CI
